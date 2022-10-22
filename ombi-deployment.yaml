@@ -20,7 +20,8 @@ spec:
       containers:
       - name: ombi
         imagePullPolicy: "Always"
-        image: linuxserver/ombi:latest
+#        image: linuxserver/ombi:latest
+        image: linuxserver/ombi:4.29.0-development
         ports:
         - name: http
           containerPort: 3579
@@ -33,10 +34,10 @@ spec:
         - name: GUID
           value: "1000"
         volumeMounts:
-        - name: k8s-pv01
+        - name: k8s-pv02
           mountPath: /config
           subPath: ombi/config
       volumes:
-      - name: k8s-pv01
+      - name: k8s-pv02
         persistentVolumeClaim:
-          claimName: synology-k8s-pv01
+          claimName: synology-k8s-pv02
