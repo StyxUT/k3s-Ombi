@@ -34,10 +34,10 @@ spec:
         - name: GUID
           value: "1000"
         volumeMounts:
-        - name: k8s-pv02
+        - name: k8s-pv01
           mountPath: /config
           subPath: ombi/config
       volumes:
-      - name: k8s-pv02
+      - name: k8s-pv01
         persistentVolumeClaim:
-          claimName: synology-k8s-pv02
+          claimName: synology-k8s-pv01
