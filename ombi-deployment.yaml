@@ -20,8 +20,7 @@ spec:
       containers:
       - name: ombi
         imagePullPolicy: "Always"
-#        image: linuxserver/ombi:latest
-        image: linuxserver/ombi:4.29.0-development
+        image: linuxserver/ombi:latest
         ports:
         - name: http
           containerPort: 3579
